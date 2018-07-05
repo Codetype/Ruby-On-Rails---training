@@ -1,0 +1,17 @@
+<h1>Welcome in calendar app</h1>
+<h3>Year: <%= @date.year%></h3>
+<p>Click month:</p>
+<div class="container">
+<div class="row">
+
+<% @months.each do |num, month| %>
+    <div class="col-sm-1">
+<%= link_to calendar_path(date: @date.change(month: num)) do %>
+    <%= month %>
+<% end %>
+</div>
+<% end %>
+
+
+</div>
+</div>
